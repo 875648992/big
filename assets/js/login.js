@@ -22,7 +22,7 @@ $(function () {
         repass: function (value, item) {
             if (value !== $('.import').val()) {
                 return '两次输入不一致'
-            } 
+            }
         }
     });
     // 注册页面
