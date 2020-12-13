@@ -4,27 +4,25 @@ $(function () {
         $('.login').hide()  //
         $('.register').show()
     })
-
+    //
     $('.goregister').click(function () {
         $('.login').show()
         $('.register').hide()
     })
 
-    let form = layui.form;
+    let form = layui.form; // 我们需要从layui这个对象里获取到form这个方法  把这个方法存在form对象里 
     var layer = layui.layer;
 
 
-    form.verify({
+    form.verify({   //框架自带的验证函数  调用这个方法里的一个方法  所以我们不能直接使用这个方法 因为我们获取不到 需要用layui里获取
         //我们既支持上述函数式的方式，也支持下述数组的形式
         //数组的两个值分别代表：[正则匹配、匹配不符时的提示文字]
         pass: [/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'],
 
         repass: function (value, item) {
-
             if (value !== $('.import').val()) {
                 return '两次输入不一致'
-
-            }
+            } 
         }
     });
     // 注册页面
@@ -40,7 +38,7 @@ $(function () {
                     return layer.msg(res.message);
                 }
                 layer.msg('注册成功');
-                $('.goregister').click()
+                $('.goregister').click()  //因为注册成功了要跳转到登入页面 触发切换事件
                 $('.regform')[0].reset()
             }
         })
