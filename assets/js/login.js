@@ -18,13 +18,13 @@ $(function () {
         //我们既支持上述函数式的方式，也支持下述数组的形式
         //数组的两个值分别代表：[正则匹配、匹配不符时的提示文字]
         pass: [/^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'],
-
-        repass: function (value, item) {
+        repass: function (value, item) {  //自定义验证 需要给没有固定验证的内容添加的 
             if (value !== $('.import').val()) {
                 return '两次输入不一致'
             }
         }
     });
+
     // 注册页面
     $('.regform').on('submit', function (e) {
         e.preventDefault()
@@ -65,10 +65,6 @@ $(function () {
                     location.href = "/home/index.html"
                 });
             }
-
         })
-
-
     })
-
 })
