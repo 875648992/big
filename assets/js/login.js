@@ -48,16 +48,19 @@ $(function () {
         e.preventDefault()
 
         data = $(this).serialize()
-
         $.ajax({
             type: "POST",
             url: "http://ajax.frontend.itheima.net/api/login",
             data,
             success: function (res) {
-                console.log(res);
+                console.log("🚀 ~ file: login.js ~ line 56 ~ res", res)
                 if (res.status !== 0) {
                     return layer.msg(res.message + "密码错误");
                 }
+                //需要用本地储存把token钥匙存起来
+                
+                localStorage.setItem("token", res.token)
+
                 layer.msg("登录成功,即将跳转页面", {
                     icon: 1,
                     time: 2000 //2秒关闭（如果不配置，默认是3秒）
