@@ -1,5 +1,7 @@
 $(function () {
 
+ 
+
     $('.gologin').click(function () {  //给登入字体添加点击事件
         $('.login').hide()  //
         $('.register').show()
@@ -31,7 +33,7 @@ $(function () {
         data = $(this).serialize()
         $.ajax({
             type: "POST",
-            url: "http://ajax.frontend.itheima.net/api/reguser",
+            url: "/api/reguser",
             data,
             success: function (res) {
                 if (res.status !== 0) {
@@ -43,6 +45,7 @@ $(function () {
             }
         })
     })
+
     // 登入页面
     $('.logform').on("submit", function (e) {
         e.preventDefault()
@@ -50,7 +53,7 @@ $(function () {
         data = $(this).serialize()
         $.ajax({
             type: "POST",
-            url: "http://ajax.frontend.itheima.net/api/login",
+            url: "/api/login",
             data,
             success: function (res) {
                 console.log("🚀 ~ file: login.js ~ line 56 ~ res", res)
@@ -58,7 +61,7 @@ $(function () {
                     return layer.msg(res.message + "密码错误");
                 }
                 //需要用本地储存把token钥匙存起来
-                
+
                 localStorage.setItem("token", res.token)
 
                 layer.msg("登录成功,即将跳转页面", {

@@ -1,0 +1,55 @@
+/* 黑马程序员 */
+
+.heima{
+    font-size: 12px;
+    text-align: center;
+}
+.textPhoto{
+    display: inline-block;
+    background-color: #009688;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+#wecome{
+    /* margin: 10px 10px 10px 30px; */
+    margin-right: 10px;
+
+}
+.textcome{
+    display: inline-block;
+    /* vertical-align: middle; */
+    font-size: 12px;
+    /* margin: 0px 10px 0px 0px; */
+
+}
+.layui-icon{
+    margin: 0 8px 0 20px;
+}
+.layui-body{
+    overflow: hidden;
+}
+#ul-img{
+    /* width: 40px;
+    height: 40px; */
+    /* margin: 0px 10px 0px 30px; */
+}
+#tit-logo{
+    margin-left: 30px;
+}
+.iconfont{
+    margin-right: 8px;
+}
+.info{
+    height: 60px;
+    line-height: 60px;
+    /* padding: 10px 0; */
+    text-align: center;
+}
