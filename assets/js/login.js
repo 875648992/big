@@ -1,6 +1,6 @@
 $(function () {
 
- 
+
 
     $('.gologin').click(function () {  //给登入字体添加点击事件
         $('.login').hide()  //
@@ -61,12 +61,11 @@ $(function () {
                     return layer.msg(res.message + "密码错误");
                 }
                 //需要用本地储存把token钥匙存起来
-
                 localStorage.setItem("token", res.token)
 
-                layer.msg("登录成功,即将跳转页面", {
+                layer.msg("草泥马!登录成功了", {
                     icon: 1,
-                    time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                    time: 1500 //2秒关闭（如果不配置，默认是3秒）
                 }, function () {
                     location.href = "/home/index.html"
                 });
