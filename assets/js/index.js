@@ -15,7 +15,6 @@ function getUrsInfo() {  //用函数封装一个ajax
             if (res.status !== 0) {
                 return layer.msg(res.message)
             }
-
             let name = res.data.nickname || res.data.username  //短路运算和三元差不多
             $('.textcome span').text('欢迎 ' + name)
 
@@ -31,7 +30,6 @@ function getUrsInfo() {  //用函数封装一个ajax
         //无论成功还是失败  进入页面的的时候获取响应 如果没有对应的token就会失败
         // 然后我们判断失败的时候就返回登入页面 complete里的参数有着响应回来的结果
         complete: function (res) {
-            console.log(res);
             data = res.responseJSON
             if (data.status !== 0, data.message !== "获取用户基本信息成功！") {
                 location.href = "/home/login.html"
