@@ -62,7 +62,6 @@ $(function () {
         $.ajax({
             url: "/my/article/cates/" + id,
             success: res => {
-                console.log(res);
                 var data1 = form.val("comform", res.data);
             }
         })
