@@ -5,7 +5,7 @@ $(function () {
     let id = location.href.split('?')[1];
 
 
-    xiugai()
+
     function xiugai() {
         $.ajax({
             url: "/my/article/" + id,
@@ -32,8 +32,12 @@ $(function () {
 
             // 添加之后还需要让form重新渲染
             form.render();
+            xiugai()
         },
+
     });
+
+
 
     // 初始化富文本编辑器
     initEditor();
@@ -151,7 +155,7 @@ $(function () {
                         success: function (res) {
                             console.log(res);
                             // 跳转到文章列表页面
-                            location.href = "/home/article/art_list.html";   
+                            location.href = "/home/article/art_list.html";
                         },
                     })
                 } else {
