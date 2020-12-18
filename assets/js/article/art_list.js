@@ -104,6 +104,10 @@ $(function () {
         })
     })
 
-
+    $('body').on('click', '.bian', function () {
+        let id = $(this).attr('data-id')
+        console.log(id);
+        location.href='/home/article/art_ava.html?'+id
+    })
 
 })

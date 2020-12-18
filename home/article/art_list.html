@@ -71,8 +71,9 @@
         <td>{{v.pub_date|filterTime}}</td>
         <td>{{v.state}}</td>
         <td>
-          <button type="button" class="layui-btn layui-btn-xs">编辑</button>
-          <button type="button" class="layui-btn layui-btn-xs layui-btn-danger delBtn" data-id="{{v.Id}}">删除</button>
+          <button type="button"  data-id='{{v.Id}}' class="layui-btn layui-btn-xs bian">编辑</button>
+          
+          <button type="button" class="layui-btn layui-btn-xs layui-btn-danger delBtn" >删除</button>
         </td>
       </tr>
       {{/each}}
